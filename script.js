@@ -24,7 +24,20 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
+let playerScore = 0;
+let computerScore = 0;
+
+const rock = document.querySelector('button#rock');
+const paper = document.querySelector('button#paper');
+const scissor = document.querySelector('button#scissor');
+
+rock.addEventListener('click', () => {
+  const playerSelection = "rock";
+  const computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection, computerSelection));
+})
+
+/*function game() {
   for (let i = 1; i <= 5; i++) {
     let player = prompt(`Round ${i}\nEnter your choice: `);
     const playerSelection = player;
@@ -43,9 +56,7 @@ function game() {
           `No one wins! Player: ${playerScore} vs Computer: ${computerScore}`
         );
     }
-}
+//}
 
-let playerScore = 0;
-let computerScore = 0;
 
-game();
+game();*/
